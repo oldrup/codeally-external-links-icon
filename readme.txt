@@ -4,11 +4,7 @@ Tags: external links, rel external, link icon, block editor, accessibility
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.2
-<<<<<<< HEAD
-Stable tag: 0.3.1
-=======
 Stable tag: 0.3.2
->>>>>>> 3e53dd49dbfb6ad87ef57d674f2e900a90fdc7aa
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,20 +69,18 @@ No. This plugin is intentionally zero-configuration with zero database options. 
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. External links in post content will automatically receive `rel="external"` and the link icon on the front end.
 
-
-
 == Changelog ==
+
 = 0.3.2 =
-- Added --cdly-external-links-margin property to finetune margin between link and icon
+- Added --cdly-external-links-margin property to finetune margin between link and icon.
 
 = 0.3.1 =
-- Updated inline CSS string escaping to esc_css() for localized accessibility labels.
+- Updated inline CSS string escaping to addslashes() and wp_strip_all_tags() for localized accessibility labels.
 - Added License URI to main PHP header for full metadata parity across plugin files.
 - Version bump and stable tag alignment.
 
-== Changelog ==
 = 0.3.0 =
-- Added [target="_blank"] and [data-type="link"] to candidates for external links
+- Added [target="_blank"] and [data-type="link"] to candidates for external links.
 - Changed plugin slug to codeally-external-links-icon and updated related files and documentation.
 
 = 0.2.0 =
