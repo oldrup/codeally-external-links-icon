@@ -77,18 +77,16 @@ No. This plugin is intentionally zero-configuration with zero database options. 
 
 == Changelog ==
 = 0.3.2 =
-* Added --cdly-external-links-margin property to finetune margin between link and icon
-
-== Changelog ==
-= 0.3.0 =
-* Added [target="_blank"] and [data-type="link"] to candidates for external links
+- Added --cdly-external-links-margin property to finetune margin between link and icon
 
 = 0.3.1 =
 - Updated inline CSS string escaping to esc_css() for localized accessibility labels.
 - Added License URI to main PHP header for full metadata parity across plugin files.
 - Version bump and stable tag alignment.
 
+== Changelog ==
 = 0.3.0 =
+- Added [target="_blank"] and [data-type="link"] to candidates for external links
 - Changed plugin slug to codeally-external-links-icon and updated related files and documentation.
 
 = 0.2.0 =
