@@ -1,15 +1,16 @@
 <?php
 /**
  * Plugin Name:       Codeally External Links Icon
- * Plugin URI:        https://github.com/oldrup/cdly-external-links-icon
+ * Plugin URI:        https://github.com/oldrup/codeally-external-links-icon
  * Description:       Append rel="external" to all external links in post content and append a link icon via CSS
- * Version:           0.2.0
- * Requires at least: 6.5
+ * Version:           0.3.1
+ * Requires at least: 7.1
  * Requires PHP:      8.2
  * Author:            Codeally
  * Author URI:        https://codeally.dk
  * License:           GPL-2.0-or-later
- * Text Domain:       cdly-external-links-icon
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       codeally-external-links-icon
  * Domain Path:       /languages
  */
 
@@ -19,29 +20,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CDLY_EXTERNAL_LINKS_ICON_VERSION', '0.2.0' );
+define( 'CDLY_EXTERNAL_LINKS_ICON_VERSION', '0.3.1' );
 
 /**
  * Enqueue plugin styles on the front end and inject localized screen reader alt-text.
  */
 add_action( 'wp_enqueue_scripts', static function(): void {
 	wp_enqueue_style(
-		'cdly-external-links-icon',
-		plugin_dir_url( __FILE__ ) . 'assets/css/cdly-external-links-icon.css',
+		'codeally-external-links-icon',
+		plugin_dir_url( __FILE__ ) . 'assets/css/codeally-external-links-icon.css',
 		array(),
 		CDLY_EXTERNAL_LINKS_ICON_VERSION
 	);
 
 	// Retrieve translated screen reader label via WordPress i18n (loaded JIT via Domain Path)
-	$external_label = __( 'external link', 'cdly-external-links-icon' );
+	$external_label = __( 'external link', 'codeally-external-links-icon' );
 	
-	// Inject the localized alt-text rule inline immediately after the stylesheet
+	// Inject localized alt-text inline; addslashes + wp_strip_all_tags safely escapes CSS string context
 	$inline_css = sprintf(
 		'body a[rel~="external"]:not(:has(svg, img))::after { content: "\2007" / " (%s)"; }',
-		esc_attr( $external_label )
+		addslashes( wp_strip_all_tags( $external_label ) )
 	);
 
-	wp_add_inline_style( 'cdly-external-links-icon', $inline_css );
+	wp_add_inline_style( 'codeally-external-links-icon', $inline_css );
 } );
 
 /**
@@ -106,7 +107,5 @@ function cdly_add_external_rel( string $content ): string {
  * Attach content filter on non-admin requests.
  */
 add_action( 'template_redirect', static function(): void {
-	if ( ! is_admin() ) {
-		add_filter( 'the_content', 'cdly_add_external_rel', 10 );
-	}
+	add_filter( 'the_content', 'cdly_add_external_rel', 10 );
 } );

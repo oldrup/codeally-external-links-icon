@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Codeally External Links Icon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-20 18:44+0000\n"
-"PO-Revision-Date: 2026-09-20 18:45+0000\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2026-09-28 12:36+0000\n"
+"Last-Translator: Bjarne Oldrup, oldrup@proton.me\n"
 "Language-Team: Danish\n"
 "Language: da_DK\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -12,8 +12,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.8.8; wp-7.1.1; php-8.3.29\n"
-"X-Domain: cdly-external-links-icon"
+"X-Loco-Version: 2.8.8; wp-7.1.2; php-8.3.29\n"
+"X-Domain: codeally-external-links-icon"
 
 #. Description of the plugin
 msgid ""
@@ -31,7 +31,7 @@ msgstr "Codeally"
 msgid "Codeally External Links Icon"
 msgstr "Codeally External Links Icon"
 
-#: cdly-external-links-icon.php:35
+#: codeally-external-links-icon.php:35
 msgid "external link"
 msgstr "eksternt link"
 
@@ -40,5 +40,5 @@ msgid "https://codeally.dk"
 msgstr "https://codeally.dk"
 
 #. URI of the plugin
-msgid "https://github.com/oldrup/cdly-external-links-icon"
-msgstr "https://github.com/oldrup/cdly-external-links-icon"
+msgid "https://github.com/oldrup/codeally-external-links-icon"
+msgstr "https://github.com/oldrup/codeally-external-links-icon"
