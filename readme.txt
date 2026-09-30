@@ -4,7 +4,7 @@ Tags: external links, rel external, link icon, block editor, accessibility
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 0.3.2
+Stable tag: 0.3.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,9 @@ No. This plugin is intentionally zero-configuration with zero database options. 
 3. External links in post content will automatically receive `rel="external"` and the link icon on the front end.
 
 == Changelog ==
+
+= 0.3.3 =
+- Tested with WordPress 6.9
 
 = 0.3.2 =
 - Added --cdly-external-links-margin property to finetune margin between link and icon.
