@@ -1,7 +1,7 @@
 === Codeally External Links Icon ===
 Contributors: oldrup
 Tags: external links, rel external, link icon, block editor, accessibility
-Requires at least: 7.1
+Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
 Stable tag: 0.3.3
