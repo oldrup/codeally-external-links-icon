@@ -1,0 +1,54 @@
+# Codeally External Links Icon Historical Changelog
+
+= 0.3.3 =
+- Added .has-cdly-icon-arrow utility class for toggling arrow icon presets via Block Editor CSS classes.
+- Standardized CSS Custom Property naming (--cdly-external-links-icon) across stylesheet and documentation.
+- Verified compatibility with WordPress 7.1.
+
+= 0.3.2 =
+- Added --cdly-external-links-margin property to finetune margin between link and icon.
+
+= 0.3.1 =
+- Updated inline CSS string escaping to addslashes() and wp_strip_all_tags() for localized accessibility labels.
+- Added License URI to main PHP header for full metadata parity across plugin files.
+- Version bump and stable tag alignment.
+
+= 0.3.0 =
+- Added [target="_blank"] and [data-type="link"] to candidates for external links.
+- Changed plugin slug to codeally-external-links-icon and updated related files and documentation.
+
+= 0.2.0 =
+- Introduced zero-specificity CSS Custom Property API (`--codeally-external-links-icon`) using `:where(:root)`.
+- Added `--cdly-mask-image-arrow` (diagonal arrow) preset alongside `--cdly-mask-image-box` (default box icon).
+- Added support for container and block-level icon scoping in Block Editor Custom CSS.
+
+= 0.0.10 =
+- Removed redundant `load_plugin_textdomain()` call to support WordPress 4.6+ JIT translations without Plugin Check PCP warnings.
+
+= 0.0.9 =
+- Added text domain loading (`Domain Path: /languages`) for i18n translation support.
+- Dynamic localized screen reader label injection via `wp_add_inline_style()`.
+
+= 0.0.8 =
+- Added screen reader accessibility context directly in CSS `content` syntax.
+- Added `forced-colors: active` high-contrast mode media query for WCAG 1.4.11 compliance.
+- Precision-tuned `:not(:has(svg, img))` selector and `margin-inline-start` punctuation handling.
+
+= 0.0.7 =
+- Updated short description syntax to pass Plugin Check PCP validation.
+
+= 0.0.6 =
+- Refactored front-end filtering lifecycle for maximum stability.
+
+= 0.0.5 =
+- Tested and optimized domain normalization logic.
+
+= 0.0.4 =
+- Improved PHP 8.2+ strict type handling on host comparison helpers.
+
+= 0.0.3 =
+- Replaced regex matching engine with WP_HTML_Tag_Processor for high-performance HTML stream parsing.
+- Added www domain normalization.
+
+= 0.0.1 =
+- Initial standalone plugin release.
