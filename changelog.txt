@@ -1,5 +1,8 @@
 # Codeally External Links Icon Historical Changelog
 
+= 0.4.1 =
+- Avoid adding a duplicate `external` rel token when an existing token uses different letter casing.
+
 = 0.3.3 =
 - Added .has-cdly-icon-arrow utility class for toggling arrow icon presets via Block Editor CSS classes.
 - Standardized CSS Custom Property naming (--cdly-external-links-icon) across stylesheet and documentation.

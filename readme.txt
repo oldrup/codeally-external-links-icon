@@ -4,7 +4,7 @@ Tags: external links, rel external, link icon, block editor, accessibility
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 0.4.0
+Stable tag: 0.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,9 @@ You can switch between built-in presets globally or per block:
 3. External links in post content will automatically receive `rel="external"` and the link icon on the front end.
 
 == Changelog ==
+
+= 0.4.1 =
+- Avoid adding a duplicate `external` rel token when an existing token uses different letter casing.
 
 = 0.4.0 =
 - Improved localized CSS alternative-text serialization with `wp_json_encode()`.

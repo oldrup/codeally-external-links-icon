@@ -3,7 +3,7 @@
  * Plugin Name:       Codeally External Links Icon
  * Plugin URI:        https://github.com/oldrup/codeally-external-links-icon
  * Description:       Append rel="external" to all external links in post content and append a link icon via CSS
- * Version:           0.4.0
+ * Version:           0.4.1
  * Requires at least: 6.9
  * Requires PHP:      8.2
  * Author:            Codeally
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CDLY_EXTERNAL_LINKS_ICON_VERSION', '0.4.0' );
+define( 'CDLY_EXTERNAL_LINKS_ICON_VERSION', '0.4.1' );
 
 /**
  * Enqueue plugin styles on the front end and inject localized screen reader alt-text.
@@ -97,8 +97,9 @@ function cdly_add_external_rel( string $content ): string {
 		$rel       = $processor->get_attribute( 'rel' );
 		$rel_str   = is_string( $rel ) ? $rel : '';
 		$rel_parts = preg_split( '/\s+/', $rel_str, -1, PREG_SPLIT_NO_EMPTY ) ?: array();
+		$normalized_rel_parts = array_map( 'strtolower', $rel_parts );
 
-		if ( ! in_array( 'external', $rel_parts, true ) ) {
+		if ( ! in_array( 'external', $normalized_rel_parts, true ) ) {
 			$rel_parts[] = 'external';
 			$processor->set_attribute( 'rel', implode( ' ', $rel_parts ) );
 		}
